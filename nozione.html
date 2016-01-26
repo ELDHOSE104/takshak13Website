@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nozione</title>
+ <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen, print"/>
+<style>
+body
+{
+	background-image:url(img/nozione.jpg);
+}
+.LB-black-overlay { 
+	    display: none; 
+	    position: fixed; 
+	    top: 0%; 
+        left: 0%; 
+	    width: 100%; 
+	    height: 100%; 
+	    background-color: #000; 
+	    z-index:1001; 
+	    -moz-opacity: 0.8; 
+	    opacity:.80; 
+	    filter: alpha(opacity=80); 
+	} 
+	.LB-white-content { 
+	    display: none; 
+	    position: fixed; 
+	    width: auto; 
+	    height: auto; 
+	    padding: 20px; 
+	    margin: 20% 20%; 
+	    border: 1px solid #666;
+		background:url(img/div_back.jpg) repeat;
+	    z-index:1002; 
+	} 
+	a#close { 
+	    height: 30px; 
+	    width: 30px;  
+	    background: url(img/close.png) 0 0; 
+	} 
+	a#close:hover { 
+	    background: url(img/close.png) 0 -30px; 
+	}  
+</style>
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+</head>
+
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
+<div id="fade" class="LB-black-overlay" onclick="if (!is_modal) HideLightBox(); return false;"></div>
+<div id="quiz_details" class="LB-white-content" style="position:absolute; top:-10%;">
+<img src="img/close.png" id="close" onclick="HideLightBox(); return false;" style=" position:relative;z-index:3; bottom:40%;float:right;">
+<br><br>
+<center><font color="#000000" style="font-family:Open Sans, Arial, Helvetica, sans-serif;" size="+1"><br><p align="left"><br /><br /><font color="#990000">&nbsp;&nbsp;&nbsp;&nbsp;NOZIONE</font> is an initiative taken up by us, the students of Mar Athanasius College of Engineering, Kothamangalam, as a part of TAKSHAK–the annual technical fest. The theme for TAKSHAK'13 is ‘Education for All’ and we aim to show full justice to it by conducting <font color="#990000">NOZIONE</font>.<br /><br />
+<font color="#990000">&nbsp;&nbsp;&nbsp;&nbsp;NOZIONE</font> is an All Kerala Inter-school General Quiz competition and also an effort aimed to diminish the lack of opportunities for children to get educated. The funds that we raise will be utilized for attaining the above mentioned objective.<br /><br />
+The structure for <font color="#990000">NOZIONE</font> is as mentioned below:<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Kerala is divided into five zones namely, Thiruvananthapuram, Kottayam, Ernakulam, Thrissur and Kozhikode. Every school having a total strength of 1500 or more are invited from each zone.Each team consists of two members. A zone wise competition will be held at a selected venue on August 24th, 2013, simultaneously in each zone.The preliminary round will be a written test where upon a shortlist of  hundred is prepared. Teams are further narrowed to twenty by an MCQ test. These twenty teams are then split into two groups of ten each. These two groups will go through a non-written test conducted by the quiz master and five from each group will be selected from each zone.The ten teams thus selected from each zone will be pitted against each other at our college on September 27th, 2013.<br /><br />
+The fifty teams selected from the five zones would undergo a screening test from which twelve gets selected into the finals. Three from the eliminated thirty eight teams will be granted wildcard entry to the finals, thus forming the ‘Elite Fifteen’. The finals of NOZIONE consists of two rounds where the first one would be the elimination round and the second one, the ultimate showdown. Layout of the last two rounds solely depends on the decision of the quiz master.
+<br /><br />
+<font color="#990000">EVENT HEADS:</font><br /><br />
+Kevin Johny-+919496540206<br /><br />
+Sekar B R-+919539856640<br /><br />
+</p></font></center>
+</div>
+<div class="learn">
+<a class="foot" href="" onclick="ShowLightBox('quiz_details'); return false;"><img class="learn" src="img/learn-more-button.png" style="width:13%; height:13%; position:fixed; left:55%; bottom:35%;"/></a>
+</div>
+<a href="index.php"><img src="img/go-back-icon.png" style="float:right; bottom:6%; right:1%; position:fixed; width:7%;" /></a>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+<script>
+$(".learn").hover(function() {
+    $(this).animate({
+        'height': $(this).height() * 1.1,
+        'width' : $(this).width() * 1.1
+    });
+},function() {
+   $(this).animate({
+        'height': $(this).height() / 1.1,
+        'width' : $(this).width() / 1.1
+    });
+});
+</script>
+<script type="text/javascript"> 
+	var curr_lb_div; 
+	var is_modal = false; 
+	function ShowLightBox(lb_div, isModal) 
+	{ 
+	    document.getElementById(lb_div).style.display='block'; 
+	    document.getElementById('fade').style.display='block'; 
+	    curr_lb_div = lb_div; 
+	    if (isModal) 
+	        is_modal = true; 
+	    else is_modal = false; 
+	} 
+	function HideLightBox() 
+	{ 
+	    if (document.getElementById(curr_lb_div)) 
+	    { 
+	         document.getElementById(curr_lb_div).style.display='none'; 
+             document.getElementById('fade').style.display='none'; 
+	         curr_lb_div = ''; 
+	    } 
+	} 
+ </script>
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() { // makes sure the whole site is loaded
+			$("#status").fadeOut(); // will first fade out the loading animation
+			$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+		})
+	//]]>
+</script> 
+</body>
+</html>
